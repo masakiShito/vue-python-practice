@@ -1,0 +1,26 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+*.sqlite3
+
+# Vue
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.vite/
+
+# Docker
+**/data/
+**/logs/
+**/volumes/
+**/postgres_data/
+**/db_data/
+
+# VSCode & OS
+.vscode/
+*.code-workspace
+.DS_Store
