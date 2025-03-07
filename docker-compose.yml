@@ -26,6 +26,8 @@ services:
       - ./backend/.env
     volumes:
       - ./backend:/app
+    environment:
+      - PYTHONPATH=/app/app # ← ここを追加
 
 volumes:
   postgres_data:

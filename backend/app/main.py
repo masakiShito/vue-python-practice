@@ -1,11 +1,15 @@
 from fastapi import FastAPI
 from .database import engine
-from .models import Base
+from app.models.base import Base  # ← 絶対パスに修正
+from .controller import room_controller  # ← 修正
 
 app = FastAPI()
 
-# データベーステーブルの作成
+# テーブル作成
 Base.metadata.create_all(bind=engine)
+
+# ルーター登録
+app.include_router(room_controller.router)
 
 @app.get("/")
 def read_root():
